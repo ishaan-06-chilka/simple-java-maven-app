@@ -20,6 +20,6 @@ node {
     }
 
     stage('Docker Build') {
-        sh 'docker build -t simple-java-maven-app:latest .'
+        sh 'id && ls -ln /var/run/docker.sock && docker version && docker build -t simple-java-maven-app:latest .'
     }
 }
