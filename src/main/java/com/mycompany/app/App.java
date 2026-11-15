@@ -1,16 +1,16 @@
 package com.mycompany.app;
-
+import java.util.logging.Logger;
 /**
  * Hello world!
  */
 public class App {
+    private static final Logger LOGGER = Logger.getLogger(App.class.getName());
 
     private static final String MESSAGE = "Hello DevOps!";
 
-    public App() {}
-
+   
     public static void main(String[] args) {
-        System.out.println(MESSAGE);
+        LOGGER.info(MESSAGE);
     }
 
     public String getMessage() {
