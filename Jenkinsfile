@@ -18,4 +18,11 @@ node {
             }
         }
     }
+    stage('Docker Build') {
+        sh 'id && ls -ln /var/run/docker.sock && docker version && docker build -t simple-java-maven-app:latest .'
+    }
+
+    stage('Docker Run') {
+        sh 'docker run --rm simple-java-maven-app:latest'
+    }
 }
